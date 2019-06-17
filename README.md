@@ -8,7 +8,6 @@
 ### 1. 手动安装
 1. 下载本项目Zip,并解压.
 2. 拖取DVBluetooth/DVBluetooth文件夹到你的项目中
-3. 导入本项目 `import DVBluetoothSwift`
 
 ### 2.Cocoapod 安装
 1. 安装Cocoapod, 并在根目录下运行 `pod init`
