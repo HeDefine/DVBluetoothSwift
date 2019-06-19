@@ -32,7 +32,7 @@ let UUIDInfoService = "FF90"
 let UUIDDeviceNameCharateristic = "FF91"
 
 /**
- 初始化配置, 个性化配置
+ 初始化配置, 个性化配置。
  */
 public static let shared = BedManager()
     
