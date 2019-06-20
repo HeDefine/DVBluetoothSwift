@@ -34,7 +34,7 @@ let UUIDDeviceNameCharateristic = "FF91"
 /**
  初始化配置, 个性化配置。
  */
-public static let shared = BedManager()
+    public static let shared = BedManager()
     
     override init() {
         super.init()
@@ -53,17 +53,13 @@ public static let shared = BedManager()
         self.setScannedPeriFilterBlock { (peri) -> Bool in
             return peri.name.count > 0
         }
-        
         self.setConnectPeriFilterBlock { (peri) -> Bool in
             let filter1 = peri.filter(serviceUUID: UUIDWriteDataService,
                                       characteristicUUIDs: [UUIDWriteDataCharateristic])
-            
             let filter2 = peri.filter(serviceUUID: UUIDReadDataService,
                                       characteristicUUIDs: [UUIDReadDataCharateristic])
-            
             return filter1 && filter2
         }
-        
         self.setNotifyPeriCharacteristicBlock { (peri) in
             peri.setNotifyValue(true, characteristicUUID: UUIDReadDataCharateristic)
         }
